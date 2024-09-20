@@ -29,6 +29,9 @@ def scrape_news():
     
     return news_list
 
+@app.route('/')
+def home():
+    return jsonify({"message": "Welcome to the Finance News API!"})
 
 @app.route('/news', methods=['GET'])
 def get_news():
@@ -46,4 +49,31 @@ def get_news():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.getenv('PORT', 5000)), debug=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
